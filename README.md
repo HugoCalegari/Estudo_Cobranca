@@ -12,7 +12,7 @@ Uma outra proposta poderia ser estimar qual é o valor pago pelo indivíduo para
 
 # Etapas
 
-## Avalia dados
+## 0.Avalia_Dados
 
 Avaliacao_Inicial.ipynb: Etapa de estudo da base, identificação de dados ausentes e duplicados (essa etapa foi feita agora, para não precisar carregas as variáveis nas demais análises), criação de target para uso em outros notebooks e separação das bases em treino, validação e out of time (oot). A base de validação foi construída com os mesmos meses que foram considerados na bse de treino.
 
