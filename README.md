@@ -26,4 +26,4 @@ Algumas sugestões para posterior análise: dias entre o último e primeiro atra
 
 1.Exploracao_1.ipynb: etapa de estudo de variáveis, teste de imputação, relações entre as variáveis explicativas e testes de independência;
 
-2.Pre_Processamento.ipynb: etapa de escolha das variáveis numéricas e categóricas que serão usadas na etapa de modelagem; pré-processamento das variáveis categóricas e numéricas.
+2.Pre_Processamento.ipynb: etapa de escolha das variáveis numéricas e categóricas que serão usadas na etapa de modelagem; pré-processamento das variáveis categóricas e numéricas de treino, validação e teste (oot).
