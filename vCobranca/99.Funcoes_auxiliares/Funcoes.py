@@ -4,6 +4,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
+import pickle
+import os
 
 ########################################################  Funções
 
@@ -146,3 +149,42 @@ def ajusta_categorias(df):
     df['VAR_113'] = df['VAR_113'].map(DePara4)
 
     return df
+
+
+# Função que retorna os dados numéricos padronizados ou normalizados e o caminho onde o padronizador foi saldo em formato pickle
+
+def Padronizacao(dataframe, lista_variaveis_numericas, tipo = 'padro', path = os.getcwd(), nome_sclr = 'scaler.pkl'):
+    # dataframe é um pandas dataframe
+    # lista_variaveis_numericas é uma lista de variáveis numéricas
+    # tipo é uma string com o tipo de padronizador selecionado, pode ser a padronização ou narmalização dos dados
+    # nome_sclr é o nome com o qual o padronizador será salvo
+
+    if tipo == 'padro':
+        SC = StandardScaler()
+        SC.fit(dataframe[lista_variaveis_numericas])
+        dados_new = pd.DataFrame(SC.transform(dataframe[lista_variaveis_numericas]), columns=dataframe[lista_variaveis_numericas].columns)
+
+        # Salva o StandardScaler para aplicação em dados futuros
+        # path = os.getcwd()
+
+        path = path + '/' + nome_sclr
+        print('O StandardScaler será salvo no caminho:', path)
+        
+        with open(path,'wb') as f:
+            pickle.dump(SC, f)
+
+    elif tipo == 'norm':
+        MMS = MinMaxScaler()
+        MMS.fit(dataframe[lista_variaveis_numericas])
+        dados_new = pd.DataFrame(MMS.transform(dataframe[lista_variaveis_numericas]), columns=dataframe[lista_variaveis_numericas].columns)
+
+        # Salva o StandardScaler para aplicação em dados futuros
+        # path = os.getcwd()
+
+        path = path + '/' + nome_sclr
+        print('O MinMaxScaler será salvo no caminho:', path)
+        
+        with open(path,'wb') as f:
+            pickle.dump(MMS, f)
+        
+    return([dados_new, path])
