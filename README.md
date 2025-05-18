@@ -12,6 +12,8 @@ Enquadramento em classificação: desconsiderando os custos de recuperação, po
 
 Enquadramento em regressão: uma outra proposta poderia ser estimar qual é o valor pago pelo indivíduo para aquela parcela em atraso. Com o valor estimado, tem-se uma estimativa do percentual convertido (razão entre saldo pago e saldo em atraso). Dado isso, pode-se pensar em estratégias para aumentar o percentual pago das operações.
 
+A segunda proposta será a abordada nos estudos sequenciais, ou seja, será estimado o pagamento efetuado. Posteriormente, pode-se ter uma estimativa de percentual pago. A ideia será focar no público ou grupo com maior saldo pago. A eficiência na cobrança apoiará no incremento de receita, redução de custos de cobrança e, potencialmente, redução de provisionamento dado que a Loss Given Default (LGD) poderá deflacionar a Probabilidade de Default (PD) do associado.
+
 # Etapas
 
 ## 0.Avalia_Dados
@@ -24,6 +26,14 @@ Algumas sugestões para posterior análise: dias entre o último e primeiro atra
 
 ## 1.Estudo_Variaveis
 
+Etapa de avaliação de estratégias de imputação dos dados faltantes e redução de dimensionalidade. 
+
 1.Exploracao_1.ipynb: etapa de estudo de variáveis, teste de imputação, relações entre as variáveis explicativas e testes de independência;
 
 2.Pre_Processamento.ipynb: etapa de escolha das variáveis numéricas e categóricas que serão usadas na etapa de modelagem; pré-processamento das variáveis categóricas e numéricas de treino, validação e teste (oot).
+
+## 2.Modelagem
+
+Fase de estudo de modelos, com objetivo de estimar o valor de pagamento feito pelo indivíduo.
+
+1.Modelos_PT1: Fase inicial de estudo de modelos.
