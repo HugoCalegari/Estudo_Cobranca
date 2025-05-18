@@ -36,6 +36,6 @@ Etapa de avaliação de estratégias de imputação dos dados faltantes e reduç
 
 Fase de estudo de modelos, com objetivo de estimar o valor de pagamento feito pelo indivíduo.
 
-1.Modelos_PT1: fase inicial de estudo de modelos, sem e com otimização de hiperparâmetros. Os modelos foram logados no mlflow e as métricas comparadas. Optou-se pela RandomForest com o tuning de hiperparâmetro usando o hyperopt;
+1.Modelos_PT1: fase inicial de estudo de modelos, sem e com otimização de hiperparâmetros. Os modelos foram logados no mlflow e as métricas comparadas. Optou-se pela RandomForest com o tuning de hiperparâmetro usando o hyperopt. OBS: devido ao tempo de execução dos modelos, optou-se por usar uma amostra;
 
-2.Interpretabilidade: interpretabilidade de um dos melhores modelos encontrados na exploração dos modelos anteriormente.
+2.Interpretabilidade: interpretabilidade de um dos melhores modelos encontrados na exploração dos modelos anteriormente. Aplicação do modelo na base oot e exporta a base completa oot para análise no excel.
